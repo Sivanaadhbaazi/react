@@ -1,21 +1,21 @@
-       
     import React from 'react'
-    import ReactDOM  from 'react-dom'
+    import ReactDOM  from 'react-dom/client'
 
-    const heading= React.createElement(
-    "div", 
-    { id:'parent'},
-    [React.createElement(
-        "h1", 
-        { id:'child1'},
-        "heading 1"
-    ),
-    React.createElement(
-        "h2", 
-        { id:'child2'},
-        "heading 2"
-    )]
+    const para = 1000; 
+
+    const Heading = () => (
+        <h1>heading form child component</h1>
+        
     );
+
+    const Parent = () => (
+        <div id="parent">
+            { Heading() }
+            <h2> this is heading form parent</h2>
+            { para}
+        </div>
+    )
+     
       
     const root=ReactDOM.createRoot(document.getElementById("root"));
-    root.render(heading);
+    root.render(<Parent />);
