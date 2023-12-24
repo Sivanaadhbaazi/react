@@ -177,10 +177,10 @@
 
     const RestroCard = (props) => {
         
-        const { name,cuisines,avgRatingString,costForTwo,cloudinaryImageId} = props.resData.info;
+        const { id,name,cuisines,avgRatingString,costForTwo,cloudinaryImageId} = props.resData.info;
         
         return(
-            <div className="restrocard" style={styleCard}>
+            <div className="restrocard"  style={styleCard}>
                 <div className="image">
                     <img src={ "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+ cloudinaryImageId }/>
 
@@ -201,7 +201,7 @@
             <div className="resConatainer">
                 {
                     restData.map((resturant) => (
-                        <RestroCard resData={ resturant } />
+                        <RestroCard key= { resturant.info.id } resData={ resturant } />
                     )) 
 
                 }
