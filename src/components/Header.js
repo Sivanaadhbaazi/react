@@ -1,8 +1,9 @@
+import { useState } from "react";
 import { LOGO } from "../utills/constants";
 
 export const Header = () => {
 
-    let btnName ="Login"
+    const [btnName,setbtnName] =useState("Login");
     return (<div className="header">
         <div className="logo">
             <img src={ LOGO }/>
@@ -14,8 +15,7 @@ export const Header = () => {
                 <li>Contatc us</li>
                 <li>Cart</li>
                 <button onClick = {() => {
-                    btnName = "shivaa";
-                    console.log(btnName);
+                   setbtnName("log out");
                     }}>{ btnName}</button>
             </ul>
 
