@@ -22,7 +22,12 @@
     padding:20px;
 }
 
-.resConatainer
+.navbar .items li button
+{
+    padding:10px;
+}
+
+.resConatainer,.shimmer-container
 {
     padding:20px;
     border:1px solid;
@@ -30,12 +35,17 @@
     display: flex;
     flex-wrap: wrap;
 }
-.restrocard
+.restrocard, .shimmer-card
 {
     width:150px;
     height:300px;
     overflow: hidden;
     margin:5px;
+}
+
+.shimmer-card
+{
+    background-color: #f0f0f0;
 }
 
 .restrocard .image

@@ -1,7 +1,9 @@
 import { LOGO } from "../utills/constants";
 
-export const Header = () => (
-    <div className="header">
+export const Header = () => {
+
+    let btnName ="Login"
+    return (<div className="header">
         <div className="logo">
             <img src={ LOGO }/>
         </div>
@@ -11,10 +13,13 @@ export const Header = () => (
                 <li>About us</li>
                 <li>Contatc us</li>
                 <li>Cart</li>
-
+                <button onClick = {() => {
+                    btnName = "shivaa";
+                    console.log(btnName);
+                    }}>{ btnName}</button>
             </ul>
 
         </div>
-    </div>
-);
+    </div>);
+};
 
