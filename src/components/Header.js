@@ -15,7 +15,10 @@ export const Header = () => {
                 <li>Contatc us</li>
                 <li>Cart</li>
                 <button onClick = {() => {
+                    if(btnName === "Login")
                    setbtnName("log out");
+                    else
+                    setbtnName("Login");
                     }}>{ btnName}</button>
             </ul>
 
