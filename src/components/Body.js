@@ -18,18 +18,20 @@ import ShimmerUI from './ShimmerUI.JS';
     },[]);
 
     const fetchData = async () => {
-        const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4875418&lng=78.3953462&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+        const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.4586853&lng=78.38848879999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const resfetch= await data.json();
+
+        console.log(resfetch);
         
-        setlistOfRest(resfetch?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        setorglistOfRest(resfetch?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setlistOfRest(resfetch?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        setorglistOfRest(resfetch?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
     }
 
     console.log("body rendered");
 
     //Conditional Rendering 
-    if(listOfRest.length ===0)
+    if(listOfRest.length === 0)
     {
         return (<ShimmerUI />);
     }

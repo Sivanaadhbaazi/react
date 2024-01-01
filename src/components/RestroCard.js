@@ -1,4 +1,5 @@
 import { CLOUD_URL } from "../utills/constants";
+import { Link } from "react-router-dom";
 
 const styleCard = {
     backgroundColor: "#f0f0f0",
@@ -15,7 +16,7 @@ const RestroCard = (props) => {
 
             </div>
             <div className="details">
-                <h4 className='title'>{name} </h4>
+               <Link to={"resturants/"+id}> <h4 className='title'>{name} </h4></Link>
                 <h4>{cuisines.join(",")}</h4>
                 <h4> {avgRatingString} </h4>
                 <h4> {costForTwo} </h4>
